@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Prediction & Disaster Management</title><br><br>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="weather-panel">
+      <h2>🌤️ Climate Prediction <br>& Disaster Management</h2><br><br>
+      <input type="text" id="location" placeholder="Enter City Name">
+      <button id="getPrediction">Get Prediction</button>
+      <div id="weather-info"><br><br>
+        <p><strong>Current Weather</strong></p><br>
+        <p>🌡️ Temperature: <span id="temperature">--</span> °C</p><br>
+        <p>💧 Humidity: <span id="humidity">--</span>%</p><br>
+        <p>🌬️ Wind Speed: <span id="wind-speed">--</span> km/h</p><br>
+        <p>⚠️ Risk Level: <span id="risk-level">--</span></p><br>
+      </div>
+    </div>
+
+    <div class="precautions">
+      <h3>🛑 Precautionary Measures</h3>
+      <ul>
+        <li>💦 Stay hydrated.</li>
+        <li>☂️ Avoid outdoor activities during extreme weather.</li>
+        <li>📢 Follow local weather updates.</li>
+      </ul>
+    </div>
+
+    <div class="sos-alert">
+      <h3>SOS Alert</h3>
+      <button id="sos-btn">🚨 Send SOS</button>
+    </div>
+
+    <div class="weather-forecast">
+      <h3>📅 5-Day Weather Forecast</h3>
+      <div class="toggles">
+        <label><input type="checkbox" id="temp-toggle" checked>🌡️ Temperature</label>
+        <label><input type="checkbox" id="hum-toggle" checked>💧 Humidity</label>
+        <label><input type="checkbox" id="wind-toggle" checked>🌬️ Wind Speed</label>
+      </div>
+      <canvas id="forecastChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
