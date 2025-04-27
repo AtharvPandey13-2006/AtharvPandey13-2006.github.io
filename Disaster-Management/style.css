@@ -1,0 +1,130 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 20px;
+  }
+  
+  /* Layout */
+  .container {
+    display: grid;
+    grid-template-areas:
+        "weather precautions sos"
+        "weather forecast forecast";
+    gap: 20px;
+  }
+  
+  /* Panels */
+  .weather-panel {
+    grid-area: weather;
+    background-color: #334155;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  input, button {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+  }
+  button {
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Precautionary Measures */
+  .precautions {
+    grid-area: precautions;
+    background-color: #334155;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* SOS Alert */
+  .sos-alert {
+    grid-area: sos;
+    background-color: #334155;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  #sos-btn {
+    background-color: #ef4444;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  /* Weather Forecast */
+  .weather-forecast {
+    grid-area: forecast;
+    background-color: #334155;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+    overflow: hidden;
+  }
+  
+  /* Fix Chart Size */
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 300px;
+    display: block;
+  }
+  
+  /* Toggle Buttons */
+  .toggles {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .weather-panel,
+    .precautions,
+    .sos-alert,
+    .weather-forecast {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    input, button {
+        width: 100%;
+    }
+  
+    .toggles {
+        flex-direction: column;
+    }
+    
+    /* Ensure chart fits properly */
+    .weather-forecast {
+        height: auto;
+        padding: 15px;
+    }
+    
+    canvas {
+        max-height: 250px;
+    }
+  }
+  
